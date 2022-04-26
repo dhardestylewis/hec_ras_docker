@@ -17,15 +17,13 @@ The general installation steps to get HEC-RAS going:
 HEC-RAS commands may be run as one-off commands using this Docker image using the following shell command as a template:
 
 ```
-docker run --name hec_ras_bash --rm -i -t --mount type=bind,sour
-ce="$(pwd)",target="/mnt/host" dhardestylewis/hec_ras_docker:latest RasUnsteady Muncie.c04 b04
+docker run --name hec_ras_bash --rm -i -t --mount type=bind,source="$(pwd)",target="/mnt/host" dhardestylewis/hec_ras_docker:latest RasUnsteady Muncie.c04 b04
 ```
 
 or HEC-RAS can be wrapped together in a script with other commands and executed as follows:
 
 ```
-docker run --name hec_ras_bash --rm -i -t --mount type=bind,source="$(pwd)
-",target="/mnt/host" dhardestylewis/hec_ras_docker:latest bash hec_ras_commands.sh
+docker run --name hec_ras_bash --rm -i -t --mount type=bind,source="$(pwd)",target="/mnt/host" dhardestylewis/hec_ras_docker:latest bash hec_ras_commands.sh
 ```
 
 where `hec_ras_commands.sh` is written according to this template:
