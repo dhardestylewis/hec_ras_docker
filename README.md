@@ -10,8 +10,7 @@ The general installation steps to get HEC-RAS going:
 - Run HEC-RAS from within the HEC-RAS container
 
 
-**The following instructions are for Docker. Instructions for Singularity are be
-low**.
+**The following instructions are for Docker. Instructions for Singularity are below**.
 
 *Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned HEC-RAS repository and the parent HEC-RAS input/output directories.
 
