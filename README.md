@@ -1,7 +1,9 @@
 ##### Table of contents
 
 [Dockerfile for HEC-RAS](#dockerfile)
+
 [Singularity instructions](#singularity)
+
 [Initiating scripts](#scripting)
 
 
