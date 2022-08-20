@@ -1,21 +1,25 @@
 ##### Table of contents
+
 [Dockerfile for HEC-RAS](#dockerfile)
+[Singularity instructions](#singularity)
+[Initiating scripts](#scripting)
+
 
 <a name="dockerfile"/>
 
-# Dockerfile for HEC-RAS
+## Dockerfile for HEC-RAS
 
 This [Dockerfile](https://github.com/dhardestylewis/hec_ras_docker/blob/main/Dockerfile) can be used as line-by-line installation instructions for HEC-RAS's software dependencies.
 
 This Docker image contains the binary executables for HEC-RAS.
 
 The general installation steps to get HEC-RAS going:
-- Pull the HEC-RAS Docker image
-- Initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
-- Run HEC-RAS from within the HEC-RAS container
+1) pull the HEC-RAS Docker image
+2) initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
+3) run HEC-RAS from within the HEC-RAS container
 
 
-**The following instructions are for Docker. Instructions for Singularity are below**.
+## **The following instructions are for Docker. Instructions for Singularity are below**
 
 *Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned HEC-RAS repository and the parent HEC-RAS input/output directories.
 
@@ -41,7 +45,9 @@ RasUnsteady Muncie.c04 b04
 ```
 
 
-**Singularity instructions.**
+<a name="singularity"/>
+
+## **Singularity instructions**
 
 The Singularity pull command is similar to the Docker pull command:
 
@@ -68,7 +74,9 @@ singularity exec \
 ```
 
 
-**HEC-RAS combined with other commands in a shell script**
+<a name="scripting"/>
+
+## **HEC-RAS combined with other commands in a shell script**
 
 
 *Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned HEC-RAS repository and the parent HEC-RAS input/output directories.
