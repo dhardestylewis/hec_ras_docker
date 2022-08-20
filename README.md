@@ -1,10 +1,10 @@
 ##### Table of contents
 
-[Dockerfile for HEC-RAS](#dockerfile)
+-  [Dockerfile for HEC-RAS](#dockerfile)
 
-[Singularity instructions](#singularity)
+-  [Singularity instructions](#singularity)
 
-[Initiating scripts](#scripting)
+-  [Initiating scripts](#scripting)
 
 
 <a name="dockerfile"/>
