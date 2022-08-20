@@ -6,6 +6,8 @@
 
 -  [Initiating scripts](#scripting)
 
+-  [Using TACC's Azure image](#azure)
+
 
 <a name="dockerfile"/>
 
@@ -16,9 +18,9 @@ This [Dockerfile](https://github.com/dhardestylewis/hec_ras_docker/blob/main/Doc
 This Docker image contains the binary executables for HEC-RAS.
 
 The general installation steps to get HEC-RAS going:
-1) pull the HEC-RAS Docker image
-2) initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
-3) run HEC-RAS from within the HEC-RAS container
+0) pull the HEC-RAS Docker image, *which only needs to be done once*
+1) initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
+2) run HEC-RAS from within the HEC-RAS container
 
 
 ## **The following instructions are for Docker. Instructions for Singularity are below**
@@ -28,7 +30,7 @@ The general installation steps to get HEC-RAS going:
 HEC-RAS commands may be run as one-off commands using this Docker image using the following shell command as a template:
 
 ```
-docker run --name hec_ras_bash --rm -i -t --mount type=bind,source="$(pwd)",target="/mnt/host" dhardestylewis/hec_ras_docker:latest RasUnsteady Muncie.c04 b04
+docker run --name hec_ras_bash --rm -i -t --mount type=bind,source="$(pwd)",target="/mnt/host" dhardestylewis/hec_ras_docker:latest RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific HEC-RAS model
 ```
 
 or HEC-RAS can be wrapped together in a script with other commands and executed as follows:
@@ -43,7 +45,8 @@ where `hec_ras_commands.sh` is written according to this template:
 #!/bin/bash
 rm Muncie.p04.hdf
 cp wrk_source/Muncie.p04.tmp.hdf .
-RasUnsteady Muncie.c04 b04
+RasGeomPreprocess Muncie.x04  ## replace "Muncie.x04" with your specific HEC-RAS model
+RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific HEC-RAS model
 ```
 
 
@@ -64,7 +67,7 @@ Once pulled, a one-off HEC-RAS command using Singularity can be issued:
 ```
 singularity exec \
     hec_ras.sif \
-    RasUnsteady Muncie.c04 b04
+    RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific HEC-RAS model
 ```
 
 An interactive shell in the Singularity container may be used for troubleshooting or debugging:
@@ -102,7 +105,8 @@ where the file `hec_ras_commands.sh` may be written as:
 #!/bin/bash
 
 ## Execute HEC-RAS
-RasUnsteady Muncie.c04 b04
+RasGeomPreprocess Muncie.x04  ## replace "Muncie.x04" with your specific HEC-RAS model
+RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific Muncie model
 ```
 
 To do the same using Singularity, execute:
@@ -116,4 +120,9 @@ singularity exec \
 where `hec_ras_commands.sh` is written as above.
 
 
+<a name="dockerfile"/>
 
+## **Using TACC's Azure image for HEC-RAS**
+
+Log into Microsoft Azure from Microsoft's web portal:
+https://portal.azure.com
