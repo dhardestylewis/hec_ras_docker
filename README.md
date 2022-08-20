@@ -1,6 +1,7 @@
-# Table of contents
-1.  [Dockerfile for HEC-RAS](#Dockerfile for HEC-RAS)
+##### Table of contents
+[Dockerfile for HEC-RAS](#dockerfile)
 
+<a name="dockerfile"/>
 # Dockerfile for HEC-RAS
 
 This [Dockerfile](https://github.com/dhardestylewis/hec_ras_docker/blob/main/Dockerfile) can be used as line-by-line installation instructions for HEC-RAS's software dependencies.
