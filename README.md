@@ -61,7 +61,9 @@ RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific HEC-R
 ## **Singularity instructions**
 
 *If you are using an [@TACC](https://github.com/TACC) machine and haven't yet been onboarded:*
+
 https://www.tacc.utexas.edu/use-tacc/getting-started
+
 *or reach out!*
 
 *If you are using an @TACC machine, you will need to first need to:*
@@ -156,7 +158,9 @@ where `hec_ras_commands.sh` is written as above.
 ## **Using TACC's Azure image for HEC-RAS**
 
 *If you are using an [@Azure](https://portal.azure.com/) virtual machine and haven't yet been onboarded:*
+
 https://azure.microsoft.com/en-us/get-started/
+
 *or reach out!*
 
 - Navigate to [TACC's Azure image for HEC-RAS](https://portal.azure.com/#@wmobleyneotamu.onmicrosoft.com/resource/subscriptions/469545af-8403-410f-92e2-6300e77dcb03/resourceGroups/Hecras/providers/Microsoft.Compute/virtualMachines/HecRas-8/overview)
