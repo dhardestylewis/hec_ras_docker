@@ -157,4 +157,4 @@ Open the `Connect v` menu and click `Bastion`.
 
 Plug in the `Username` and `Password` that TACC provides and `Connect`.
 
-Enjoy `HEC-RAS 6.2` on the cloud!
+Enjoy `HEC-RAS` on the cloud!
