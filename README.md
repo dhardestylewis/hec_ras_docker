@@ -2,7 +2,7 @@
 
 -  [Dockerfile for HEC-RAS](#dockerfile)
 
--  [Singularity instructions](#singularity)
+-  [Singularity instructions (@TACC)](#singularity)
 
 -  [Initiating scripts](#scripting)
 
