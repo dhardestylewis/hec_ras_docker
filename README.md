@@ -18,12 +18,14 @@ This [Dockerfile](https://github.com/dhardestylewis/hec_ras_docker/blob/main/Doc
 This Docker image contains the binary executables for HEC-RAS.
 
 The general installation steps to get HEC-RAS going:
-0) pull the HEC-RAS Docker image, *which only needs to be done once*
-1) initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
-2) run HEC-RAS from within the HEC-RAS container
+1) pull the HEC-RAS Docker image, *which only needs to be done once*
+2) initiate a HEC-RAS container, mounting the locations of the HEC-RAS input/output directories
+3) run HEC-RAS from within the HEC-RAS container
 
 
-## **The following instructions are for Docker. Instructions for Singularity are below**
+## **Docker instructions**
+
+**Instructions for Singularity are [below](#singularity). [@TACC](https://github.com/TACC) uses Singularity instead of Docker.**
 
 *Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned HEC-RAS repository and the parent HEC-RAS input/output directories.
 
@@ -54,15 +56,36 @@ RasUnsteady Muncie.c04 b04  ## replace "Muncie.c04 b04" with your specific HEC-R
 
 ## **Singularity instructions**
 
-The Singularity pull command is similar to the Docker pull command:
+*If you are using an [@TACC] machine, you will need to first need to:*
 
+- login to [@TACC] from the command line
+*for example, if you use ssh to login to @TACC:*
+```bash
+ssh username@ls6.tacc.utexas.edu
+## substitute in the TACC supercomputer you are using above if not Lonestar6, for example stampede2.tacc.utexas.edu
+```
+*Please refer your supercomputer's user guide if you need help logging in, or reach out to us.* Here is [Lonestar6's user guide](https://portal.tacc.utexas.edu/user-guides/lonestar6#secure-shell-ssh)
+
+- login to a compute node
+```bash
+idev ## follow the prompts
+```
+
+- enable the Singularity environment
+```bash
+module load tacc-singularity
+```
+
+- pull the Singularity image - *this only needs to be done once per version*
 ```
 singularity pull \
     --name hec_ras.sif \
     docker://dhardestylewis/hec_ras_docker:latest
 ```
 
-Once pulled, a one-off HEC-RAS command using Singularity can be issued:
+*The `hec_ras.sif` file contains the HEC-RAS image.*
+
+- HEC-RAS can now be run from the container:
 
 ```
 singularity exec \
@@ -120,7 +143,7 @@ singularity exec \
 where `hec_ras_commands.sh` is written as above.
 
 
-<a name="dockerfile"/>
+<a name="azure"/>
 
 ## **Using TACC's Azure image for HEC-RAS**
 
@@ -134,4 +157,4 @@ Open the `Connect v` menu and click `Bastion`.
 
 Plug in the `Username` and `Password` that TACC provides and `Connect`.
 
-Once the desktop is open, open `HEC-RAS 6.2`.
+Enjoy `HEC-RAS 6.2` on the cloud!
