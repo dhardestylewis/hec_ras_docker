@@ -163,7 +163,7 @@ https://azure.microsoft.com/en-us/get-started/
 
 *or reach out!*
 
-- Navigate to [TACC's Azure image for HEC-RAS](https://portal.azure.com/#@wmobleyneotamu.onmicrosoft.com/resource/subscriptions/469545af-8403-410f-92e2-6300e77dcb03/resourceGroups/Hecras/providers/Microsoft.Compute/virtualMachines/HecRas-8/overview)
+- Navigate to [@wmobley](https://github.com/wmobley)'s Azure image for HEC-RAS](https://portal.azure.com/#@wmobleyneotamu.onmicrosoft.com/resource/subscriptions/469545af-8403-410f-92e2-6300e77dcb03/resourceGroups/Hecras/providers/Microsoft.Compute/virtualMachines/HecRas-8/overview)
 
 *If you experience an issue accessing this page, please reach out with a screenshot of the error message that you receive.*
 
