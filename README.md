@@ -33,6 +33,12 @@ The general installation steps to get HEC-RAS going:
 
 *Note*: In these instructions, we assume the current working directory ($PWD) contains the cloned HEC-RAS repository and the parent HEC-RAS input/output directories.
 
+Pull the latest version of HEC-RAS using:
+
+```
+docker pull dhardestylewis/hec_ras_docker
+```
+
 HEC-RAS commands may be run as one-off commands using this Docker image using the following shell command as a template:
 
 ```
